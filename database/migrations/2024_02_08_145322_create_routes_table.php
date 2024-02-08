@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-$table->string('role')->default('passenger');
-$table->string('PhoneNumber')->after('role');
-$table->string('image')->after('PhoneNumber');
+        Schema::create('routes', function (Blueprint $table) {
+            $table->id();
+            $table->string('StartCITY');
+            $table->string('EndCity');
+            $table->timestamps();
         });
     }
 
@@ -23,8 +24,6 @@ $table->string('image')->after('PhoneNumber');
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role');
-        });
+        Schema::dropIfExists('routes');
     }
 };

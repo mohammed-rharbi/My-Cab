@@ -25,11 +25,16 @@
                     @endauth
                 </div>
             @endif
-            <div class="text-white">
-                welcom to our web
+         
+            <div class="bg-gray-900 text-white flex items-center justify-center h-screen">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Welcome to Our Taxi Service</h1>
+                <p class="text-xl mb-8">We'll get you there safely and on time!</p>
+                <a href="/login" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full inline-block">Login</a>
+                <span class="mx-4 text-xl">or</span>
+                <a href="/register" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full inline-block">Register</a>
             </div>
         </div>
-
-        
+        </div>
     </body>
 </html>
